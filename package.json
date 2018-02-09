@@ -1,0 +1,69 @@
+{
+  "name": "stylelint-config-uxd",
+  "version": "0.0.0",
+  "title": "Contactlab ",
+  "description": "PostCSS Stylelint configuration at Contactlab.",
+  "license": "MIT",
+  "homepage": "https://github.com/contactlab/stylelint-config-uxd",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/contactlab/stylelint-config-uxd"
+  },
+  "bugs": {
+    "url": "https://github.com/contactlab/stylelint-config-uxd/issues"
+  },
+  "author": {
+    "name": "Contactlab UXD Team",
+    "email": "uxd@contactlab.com",
+    "homepage": "https://contactlab.com/"
+  },
+  "contributors": [
+    "Giovanni Tramutola <giovanni.tramutola@contactlab.com>",
+    "Mattia Astorino <mattia.astorino@contactlab.com"
+  ],
+  "keywords": [
+    "code checker",
+    "code linter",
+    "code standards",
+    "code style",
+    "contactlab",
+    "lint",
+    "postcss",
+    "style checker",
+    "style linter",
+    "stylelint",
+    "stylelint-config",
+    "stylelintconfig"
+  ],
+  "engines": {
+    "node": ">=9.5.0",
+    "npm": ">=5.6.0"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "ava": "ava",
+    "lint:js": "eslint src/**/*.js",
+    "prepublish": "babel src --out-dir lib",
+    "test": "npm run lint:js && npm run ava"
+  },
+  "devDependencies": {
+    "ava": "0.25.0",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.2.1",
+    "babel-preset-env": "1.6.1",
+    "eslint": "4.17.0",
+    "eslint-config-contactlab": "1.0.0",
+    "stylelint": "8.4.0",
+    "stylelint-config-standard": "^18.0.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "contactlab",
+    "parser": "babel-eslint"
+  }
+}
