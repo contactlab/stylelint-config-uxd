@@ -39,7 +39,7 @@
     "node": ">=9.5.0",
     "npm": ">=5.6.0"
   },
-  "main": "./src/index.js",
+  "main": "./lib/index.js",
   "jest": {
     "testEnvironment": "node",
     "verbose": true
@@ -52,12 +52,14 @@
     "extends": "contactlab"
   },
   "scripts": {
-    "lint:js": "shx echo \"--- Lint JS ---\" && eslint \"./src/**/*.js\" || true",
-    "lint:css": "shx echo \"--- Lint CSS ---\" && stylelint \"./examples/**/*.{css,pcss}\" --config \"./src/index.js\" || true",
+    "lint:js": "shx echo \"——— Lint JS ———\" && eslint \"./src/**/*.js\" || true",
+    "lint:css": "shx echo \"——— Lint CSS ———\" && stylelint \"./examples/**/*.{css,pcss}\" --config \"./src/index.js\" || true",
     "lint": "npm run lint:js && npm run lint:css",
     "pretest": "npm run lint",
-    "test": "shx echo \"--- Test Rules ---\" && jest",
-    "test:watch": "shx echo \"--- Test Rules Watch ---\" && jest --watch",
+    "test": "shx echo \"——— Test Rules ———\" && jest",
+    "test:watch": "shx echo \"——— Test Rules Watch ———\" && jest --watch",
+    "prebuild": "shx rm -rf lib && shx mkdir lib",
+    "build": "shx cp src/* lib",
     "dry-release": "npmpub --dry --verbose",
     "release": "npmpub"
   },

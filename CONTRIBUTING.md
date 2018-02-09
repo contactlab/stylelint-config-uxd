@@ -2,7 +2,7 @@
 
 Some basic conventions for contributing to **stylelint-config-uxd**.
 
-### General
+### 📝 General
 
 Please make sure that there aren't existing pull requests attempting to address the issue mentioned. Likewise, please check for issues related to update, as someone else may be working on the issue in a branch or fork.
 
@@ -13,29 +13,29 @@ When creating a new branch, prefix it with the *type* of the change (see section
 
 For example, if you work on a bugfix for the issue #361, you could name the branch `fix361-template-selection`.
 
-### Tools
+### 🛠️ Tools
 
 * Prefer latest [Node](https://nodejs.org/en/download/) version
 * Use [Yarn](https://yarnpkg.com/lang/en/docs/install/) over npm
 
-### Testing & Linting
+### 🚧 Testing & Linting
 
-Please test and check your code using `npm run test` or `yarn test` before submitting your pull requests.
+Please, test and check your code using `npm run test` or `yarn test` before submitting your pull requests.
 
-### Commit Message Format
+### 💬 Commit Message Format
 
 Each commit message should include a **type**, a **scope** and a **subject**:
 
 ```
-<type>(<scope>): <subject>
+<type>: <subject>
 ```
 
 Lines should not exceed 100 characters. This allows the message to be easier to read on github as well as in various git tools and produces a nice, neat commit log ie:
 
 ```
-#271 feat: Add 'color-no-invalid-hex' rule
-#270 style: Add semicolons after every statement
-#269 refactor: Update rule 'unit-no-unknown' test
+#271 feat: add 'color-no-invalid-hex' rule
+#270 style: add semicolons after every statement
+#269 refactor: update rule 'unit-no-unknown' test
 ```
 
 #### Type
@@ -55,5 +55,5 @@ Must be one of the following:
 The subject contains succinct description of the change:
 
 * Use the imperative, present tense: "change" not "changed" nor "changes"
-* Capitalize first letter
+* Don't capitalize first letter
 * No dot (.) at the end

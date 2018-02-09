@@ -4,6 +4,15 @@
 
 The purpose of this library is to promote code style consistency across complex projects in organizations of all sizes.
 
+## Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tests](#tests)
+- [Similar projects](#similar-projects)
+- [Rules](#rules)
+- [MIT License](http://opensource.org/licenses/MIT)
+
 ## Installation
 
 Install Stylelint and this config package:
@@ -65,8 +74,4 @@ A configuration for linting JavaScript (ES5 & ES6) with [eslint](http://eslint.o
 
 The configuration extends the default [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) rules. A more comprehensive list of examples is available in the [examples](https://github.com/contactlab/stylelint-config-uxd/tree/master/examples) folder.
 
-Package specific rules can be found in `/src` folder.
-
-## License
-
-[MIT License](http://opensource.org/licenses/MIT)
+Package specific rules can be found in `/lib` folder.
