@@ -1,4 +1,5 @@
-/* Bad at rule example */
+/* Bad at-rule example */
+
 .bar {}
 @media {} /* add empty line before @rules */
 

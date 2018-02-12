@@ -3,21 +3,21 @@
  * @see https://stylelint.io/user-guide/rules/
  * @type Object
  */
-export default {
+module.exports = {
   //
   // String
   // --------------------
-  'string-quotes': 'single',
+  'string-quotes': 'single', // Enforce single quotes around strings
 
   //
   // Color
   // --------------------
-  'color-hex-case': 'upper', // enforce uppercase hex colors
+  'color-hex-case': 'upper', // Enforce uppercase hex colors
 
   //
   // General / Sheet
   // --------------------
-  'max-empty-lines': 2, // disallow more than a specified number of adjacent empty lines
+  'max-empty-lines': 2, // Disallow more than a specified number of adjacent empty lines
   'max-nesting-depth': 3, // No test yet
   'no-missing-end-of-source-newline': true, // No test yet
   'no-descending-specificity': null, // No test yet
@@ -40,7 +40,7 @@ export default {
   //
   // Property
   // --------------------
-  'property-no-vendor-prefix': true, // disallow vendor prefixes for properties
+  'property-no-vendor-prefix': true, // Disallow vendor prefixes for properties
   'property-no-unknown': [ // No test yet
     true,
     {

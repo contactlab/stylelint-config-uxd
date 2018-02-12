@@ -1,8 +1,6 @@
-/* global module */
-
 // Stylelint doesn't support Babel 6 default exports,
 // so we have to use CommonJS exports instead.
-import rules from './rules';
+const rules = require('./rules');
 
 /**
  * Stylelint configuration used in Contactlab projects.
