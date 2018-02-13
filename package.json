@@ -52,12 +52,12 @@
     "extends": "contactlab"
   },
   "scripts": {
-    "lint:js": "eslint \"./src/**/*.js\" || true",
-    "lint:css": "stylelint \"./examples/**/*.{css,pcss}\" --cache || true",
-    "lint": "npm-run-all --parallel lint:*",
+    "lint:js": "shx echo \"--- Lint JS ---\" && eslint \"./src/**/*.js\" || true",
+    "lint:css": "shx echo \"--- Lint CSS ---\" && stylelint \"./examples/**/*.{css,pcss}\" --config \"./src/index.js\" || true",
+    "lint": "npm run lint:js && npm run lint:css",
     "pretest": "npm run lint",
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "shx echo \"--- Test Rules ---\" && jest",
+    "test:watch": "shx echo \"--- Test Rules Watch ---\" && jest --watch",
     "dry-release": "npmpub --dry --verbose",
     "release": "npmpub"
   },
@@ -65,8 +65,8 @@
     "eslint": "4.17.0",
     "eslint-config-contactlab": "1.0.0",
     "jest": "22.2.2",
-    "npm-run-all": "4.1.2",
     "npmpub": "3.1.0",
+    "shx": "0.2.2",
     "stylelint": "8.4.0",
     "stylelint-config-standard": "18.0.0"
   }

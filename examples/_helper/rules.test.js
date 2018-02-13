@@ -1,5 +1,5 @@
 const fs = require('fs');
-const config = require('../src/index');
+const config = require('../../src/index');
 const stylelint = require('stylelint');
 const rules = require('./rules');
 
