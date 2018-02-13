@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-uxd",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "title": "Contactlab UXD Stylelint",
   "description": "Stylelint configuration used in Contactlab projects.",
   "license": "MIT",
@@ -45,6 +45,10 @@
     "verbose": true
   },
   "eslintConfig": {
+    "env": {
+      "node": true,
+      "browser": false
+    },
     "extends": "contactlab"
   },
   "remarkConfig": {
@@ -56,9 +60,9 @@
   "scripts": {
     "lint:md": "remark . --quiet --frail || true",
     "lint:js": "eslint \"./src/**/*.js\" || true",
-    "lint:css": "stylelint \"./examples/**/*.css\" --config \"./src/index.js\" || true",
+    "lint:css": "stylelint \"./examples/**/*.{css,pcss}\" --cache || true",
     "lint": "npm-run-all --parallel lint:*",
-    "pretest": "npm-run-all --parallel lint:js lint:css",
+    "pretest": "npm run lint",
     "test": "jest",
     "test:watch": "jest --watch",
     "dry-release": "npmpub --dry --verbose",

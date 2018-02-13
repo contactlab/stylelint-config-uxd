@@ -6,10 +6,14 @@ The purpose of this library is to promote code style consistency across complex 
 
 ## Installation
 
-Install this config package and Stylelint:
+Install Stylelint and this config package:
 
 ```bash
-npm install stylelint-config-uxd --save-dev
+$ npm install --save-dev stylelint stylelint-config-uxd
+
+# --- OR ---
+
+$ yarn add --dev stylelint stylelint-config-uxd
 ```
 
 ## Usage
@@ -22,54 +26,35 @@ Create a `.stylelintrc` file with the following basic configuration:
 }
 ```
 
-This configuration is meant to be extended on a per-project basis as necessary
-using Stylelint's shareable configs feature. For more details about how shareable
-configs work, see the [Stylelint documentation](https://stylelint.io/user-guide/configuration/#extends).
+In `package.json`:
 
-## Example
-
-```css
-/* colors.pcss */
-
-html {
-  --my-color-a: #FF0000;
-  --my-color-b: #0000FF;
-}
-```
-
-```css
-/* media.pcss */
-
-@custom-media --small (width >= 100px) and (width <= 200px);
-```
-
-```css
-/* main.pcss */
-
-@import './colors';
-@import './media';
-
-.component-a,
-.component-b {
-  color: var(--my-color-a);
-  box-shadow:
-    0 0 0 1px #5B9DD9,
-    0 0 2px 1px rgba(30, 140, 190, 0.8);
-}
-
-@media (--small) {
-  .component-a {
-    color: var(--my-color-b);
+```json
+{
+  "name": {
+    ...
+  },
+  "version": {
+    ...
+  },
+  "stylelint": {
+    "extends": "stylelint-config-uxd"
+  },
+  "devDependencies": {
+    ...
   }
 }
 ```
 
-A more comprehensive list of examples is available in the [examples](https://github.com/contactlab/stylelint-config-uxd/tree/master/examples) folder.
+For more details about how shareable configs work, see the [Stylelint documentation](https://stylelint.io/user-guide/configuration/#extends).
 
 ## Tests
 
 ```bash
-npm install && npm test
+$ npm install && npm test
+
+# --- OR ---
+
+$ yarn install && yarn test
 ```
 
 ## Similar projects
@@ -78,7 +63,7 @@ A configuration for linting JavaScript (ES5 & ES6) with [eslint](http://eslint.o
 
 ## Rules
 
-The configuration extends the default [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) rules.
+The configuration extends the default [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) rules. A more comprehensive list of examples is available in the [examples](https://github.com/contactlab/stylelint-config-uxd/tree/master/examples) folder.
 
 Package specific rules can be found in `/src` folder.
 
