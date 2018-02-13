@@ -26,7 +26,7 @@ Create a `.stylelintrc` file with the following basic configuration:
 }
 ```
 
-In `package.json`:
+**Otherwise**, in `package.json`:
 
 ```json
 {
