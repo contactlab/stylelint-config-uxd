@@ -1,4 +1,4 @@
-# Contactlab UXD Team Stylelint
+# Contactlab UXD Stylelint
 
 [Stylelint](http://stylelint.io/) configuration used in [Contactlab](https://github.com/contactlab) projects.
 

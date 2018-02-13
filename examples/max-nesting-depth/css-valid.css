@@ -1,0 +1,21 @@
+.bar { /* 1 */
+  & .foo { /* 2 */
+    &__foo { /* 3 */
+      & > .baz { /* 4 */
+        content: 'x';
+      }
+    }
+  }
+}
+
+@media print { /* ignored */
+  .bar { /* 1 */
+    & .foo { /* 2 */
+      &__foo { /* 3 */
+        & > .baz { /* 4 */
+          content: 'x';
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+
+@media (max-width: 960px) {
+  a { content: 'x'; }
+}
+
+
+@mixin uxd { content: 'x'; }
+
+
+@define-mixin uxd { content: 'x'; }

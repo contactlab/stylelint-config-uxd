@@ -7,27 +7,26 @@ module.exports = {
   //
   // String
   // --------------------
-  'string-quotes': 'single', // Enforce single quotes around strings
+  'string-quotes': 'single',
 
   //
   // Color
   // --------------------
-  'color-hex-case': 'upper', // Enforce uppercase hex colors
+  'color-hex-case': 'upper',
 
   //
   // General / Sheet
   // --------------------
-  'max-empty-lines': 2, // Disallow more than a specified number of adjacent empty lines
-  'max-nesting-depth': 3, // No test yet
-  'no-missing-end-of-source-newline': true, // No test yet
-  'no-descending-specificity': null, // No test yet
-  'rule-empty-line-before': null, // No test yet
+  'max-empty-lines': 2,
+  'max-nesting-depth': 3,
+  'no-descending-specificity': null,
+  'rule-empty-line-before': null,
 
   //
   // At rule
   // --------------------
-  'at-rule-empty-line-before': null, // No test yet
-  'at-rule-no-unknown': [ // No test yet
+  'at-rule-empty-line-before': null,
+  'at-rule-no-unknown': [
     true,
     {
       'ignoreAtRules': [
@@ -40,8 +39,8 @@ module.exports = {
   //
   // Property
   // --------------------
-  'property-no-vendor-prefix': true, // Disallow vendor prefixes for properties
-  'property-no-unknown': [ // No test yet
+  'property-no-vendor-prefix': true,
+  'property-no-unknown': [
     true,
     {
       'ignoreProperties': [

@@ -1,0 +1,11 @@
+@unknown {
+  a { content: 'x'; }
+}
+
+
+@custom {
+  a { content: 'x'; }
+}
+
+
+@my-at-rule 'x.css';

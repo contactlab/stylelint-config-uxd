@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+
+a { content: 'x'; }
+
+
+a[id='foo'] { content: 'x'; }
+
+
+b { content: "x'y'z"; }
