@@ -1,5 +1,5 @@
 {
-  "name": "stylelint-config-uxd",
+  "name": "@contactlab/stylelint-config-uxd",
   "version": "1.0.0",
   "title": "Contactlab UXD Stylelint",
   "description": "Stylelint configuration used in Contactlab projects.",
