@@ -64,7 +64,7 @@
     "prebuild": "npm run test",
     "build": "shx rm -rf lib && shx mkdir lib && shx cp src/* lib",
     "prerelease": "git checkout master && git pull origin master",
-    "release": "shx echo \"——— Bump and Release ———\" standard-version",
+    "release": "shx echo \"——— Bump and Release ———\" && standard-version",
     "postrelease": "git push --follow-tags origin master && npm publish"
   },
   "dependencies": {
