@@ -1,6 +1,6 @@
 {
   "name": "@contactlab/stylelint-config-uxd",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": "Contactlab UXD Stylelint",
   "description": "Stylelint configuration used in Contactlab projects.",
   "license": "MIT",
@@ -39,6 +39,9 @@
     "node": ">=9.5.0",
     "npm": ">=5.6.0"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./lib/index.js",
   "jest": {
     "testEnvironment": "node",
@@ -58,17 +61,18 @@
     "pretest": "npm run lint",
     "test": "shx echo \"——— Test Rules ———\" && jest",
     "test:watch": "shx echo \"——— Test Rules Watch ———\" && jest --watch",
-    "prebuild": "shx rm -rf lib && shx mkdir lib",
-    "build": "shx cp src/* lib",
-    "dry-release": "npmpub --dry --verbose",
-    "release": "npmpub"
+    "prebuild": "npm run test",
+    "build": "shx rm -rf lib && shx mkdir lib && shx cp src/* lib",
+    "prerelease": "git checkout master && git pull origin master",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin master && npm publish"
   },
   "devDependencies": {
     "eslint": "4.17.0",
     "eslint-config-contactlab": "1.0.0",
-    "jest": "22.2.2",
-    "npmpub": "3.1.0",
+    "jest": "22.3.0",
     "shx": "0.2.2",
+    "standard-version": "4.3.0",
     "stylelint": "8.4.0",
     "stylelint-config-standard": "18.0.0"
   }
