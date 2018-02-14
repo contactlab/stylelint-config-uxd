@@ -12,6 +12,7 @@ The purpose of this library is to promote code style consistency across complex 
 - [Tests](#tests)
 - [Similar projects](#similar-projects)
 - [Rules](#rules)
+- [Contributing](./CONTRIBUTING.md)
 - [Apache License 2.0](http://opensource.org/licenses/MIT)
 
 ## Installation
