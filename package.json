@@ -36,8 +36,8 @@
     "stylelintconfig"
   ],
   "engines": {
-    "node": ">=9.5.0",
-    "npm": ">=5.6.0"
+    "node": ">=8",
+    "npm": ">=5"
   },
   "publishConfig": {
     "access": "public"
@@ -64,16 +64,18 @@
     "prebuild": "npm run test",
     "build": "shx rm -rf lib && shx mkdir lib && shx cp src/* lib",
     "prerelease": "git checkout master && git pull origin master",
-    "release": "standard-version",
+    "release": "shx echo \"——— Bump and Release ———\" standard-version",
     "postrelease": "git push --follow-tags origin master && npm publish"
+  },
+  "dependencies": {
+    "stylelint": "8.4.0",
+    "stylelint-config-standard": "18.0.0"
   },
   "devDependencies": {
     "eslint": "4.17.0",
     "eslint-config-contactlab": "1.0.0",
     "jest": "22.3.0",
     "shx": "0.2.2",
-    "standard-version": "4.3.0",
-    "stylelint": "8.4.0",
-    "stylelint-config-standard": "18.0.0"
+    "standard-version": "4.3.0"
   }
 }
