@@ -28,16 +28,14 @@ When you are happy with your changes, submit a pull request for code review.
 ## 📦 Cloning and Building
 1. `git clone https://github.com/contactlab/stylelint-config-uxd.git`
 2. `cd stylelint-config-uxd`
-3. `npm install` or `yarn install`
-4. `npm run build` or `yarn build`
+3. `yarn install`
+4. `yarn build`
 
 ## 🚨 Testing and Linting
 Please, test and check your code using `npm run test` or `yarn test` before submitting your pull requests.
 
 ## 🚧 Branching
-We follow a [Gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
-
-![Feature Branches](http://puu.sh/lP4eT/43f3131730.png)
+We follow a [Gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
 
 We try to keep two main branches at all times:
 
