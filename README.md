@@ -16,7 +16,7 @@ The purpose of this library is to promote code style consistency across complex 
 - [Apache License 2.0](http://opensource.org/licenses/MIT)
 
 ## Installation
-We recommend to use [**Yarn**](https://yarnpkg.com/lang/en/docs/install/) over npm (is fine anyway) and this **stylelint** config package:
+We recommend to use [Yarn](https://yarnpkg.com/lang/en/docs/install/) over npm (is fine anyway) and this **stylelint config** package:
 
 ```bash
 $ yarn add --dev stylelint-config-uxd
