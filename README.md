@@ -42,7 +42,7 @@ Create a `.stylelintrc` file with the following basic configuration:
     ...
   },
   "stylelint": {
-    "extends": "stylelint-config-uxd"
+    "extends": "@contactlab/stylelint-config-uxd"
   },
   "devDependencies": {
     ...
