@@ -19,7 +19,7 @@ The purpose of this library is to promote code style consistency across complex 
 We recommend to use [Yarn](https://yarnpkg.com/lang/en/docs/install/) over npm (is fine anyway) and this **stylelint config** package:
 
 ```bash
-$ yarn add --dev stylelint-config-uxd
+$ yarn add --dev @contactlab/stylelint-config-uxd
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ Create a `.stylelintrc` file with the following basic configuration:
 
 ```json
 {
-  "extends": "stylelint-config-uxd"
+  "extends": "@contactlab/stylelint-config-uxd"
 }
 ```
 
