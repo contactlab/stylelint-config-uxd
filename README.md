@@ -16,14 +16,10 @@ The purpose of this library is to promote code style consistency across complex 
 - [Apache License 2.0](http://opensource.org/licenses/MIT)
 
 ## Installation
-Install Stylelint and this config package:
+We recommend to use [Yarn](https://yarnpkg.com/lang/en/docs/install/) over npm (is fine anyway) and this **stylelint config** package:
 
 ```bash
-$ npm install --save-dev stylelint-config-uxd
-
-# --- OR ---
-
-$ yarn add --dev stylelint-config-uxd
+$ yarn add --dev @contactlab/stylelint-config-uxd
 ```
 
 ## Usage
@@ -31,7 +27,7 @@ Create a `.stylelintrc` file with the following basic configuration:
 
 ```json
 {
-  "extends": "stylelint-config-uxd"
+  "extends": "@contactlab/stylelint-config-uxd"
 }
 ```
 
@@ -46,7 +42,7 @@ Create a `.stylelintrc` file with the following basic configuration:
     ...
   },
   "stylelint": {
-    "extends": "stylelint-config-uxd"
+    "extends": "@contactlab/stylelint-config-uxd"
   },
   "devDependencies": {
     ...
@@ -58,10 +54,6 @@ For more details about how shareable configs work, see the [Stylelint documentat
 
 ## Tests
 ```bash
-$ npm install && npm test
-
-# --- OR ---
-
 $ yarn install && yarn test
 ```
 
