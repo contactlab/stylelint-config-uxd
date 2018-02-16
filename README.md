@@ -6,14 +6,12 @@
 
 The purpose of this library is to promote code style consistency across complex projects in organizations of all sizes.
 
-## Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Tests](#tests)
-- [Similar projects](#similar-projects)
-- [Rules](#rules)
-- [Contributing](./CONTRIBUTING.md)
-- [Apache License 2.0](http://opensource.org/licenses/MIT)
+- [Contactlab UXD Stylelint](#contactlab-uxd-stylelint)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Tests](#tests)
+  - [Similar projects](#similar-projects)
+  - [Rules](#rules)
 
 ## Installation
 We recommend to use [Yarn](https://yarnpkg.com/lang/en/docs/install/) over npm (is fine anyway) and this **stylelint config** package:
