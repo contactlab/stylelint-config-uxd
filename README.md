@@ -31,21 +31,12 @@ Create a `.stylelintrc` file with the following basic configuration:
 }
 ```
 
-**Otherwise**, in `package.json`:
+**Otherwise**, add the stylelint key to your `package.json`:
 
 ```json
 {
-  "name": {
-    ...
-  },
-  "version": {
-    ...
-  },
   "stylelint": {
     "extends": "@contactlab/stylelint-config-uxd"
-  },
-  "devDependencies": {
-    ...
   }
 }
 ```
