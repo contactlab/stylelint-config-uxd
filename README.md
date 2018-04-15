@@ -12,7 +12,8 @@ The purpose of this library is to promote code style consistency across complex 
   - [Tests](#tests)
   - [Similar projects](#similar-projects)
   - [Rules](#rules)
-  - **[Contributing](./docs/CONTRIBUTING.md)**
+  - [Contributing](./docs/CONTRIBUTING.md)
+  - [Code of Conduct](./docs/CODE_OF_CONDUCT.md)
 
 ## Installation
 We recommend to use [Yarn](https://yarnpkg.com/lang/en/docs/install/) over npm (is fine anyway) and this **stylelint config** package:
