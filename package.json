@@ -72,7 +72,7 @@
     "unit:coverage": "jest --coverage",
     "test": "yarn lint && yarn unit",
     "prebuild": "shx echo '\n  📦  Building rules...  \n' | chalk yellowBright",
-    "build": "shx rm -rf lib && shx mkdir lib && shx cp './src/*' './lib/'",
+    "build": "shx rm -rf './lib' && shx mkdir lib && shx cp './src/*' './lib/'",
     "postbuild": "shx echo '\n  ✅  Rules build completed!  \n' | chalk greenBright",
     "prerelease": "shx echo '\n  🚀  Release on NPM and GitHub...  \n' | chalk cyanBright",
     "release": "standard-version",
