@@ -8,7 +8,7 @@ module.exports = [
     severityFlag: 'error'
   }, {
     name: 'color-hex-case',
-    warningText: 'Expected \"#fff\" to be \"#FFF\" (color-hex-case)',
+    warningText: 'Expected "#fff" to be "#FFF" (color-hex-case)',
     warnings: 1,
     warningLine: 1,
     warningCol: 12,
@@ -29,21 +29,21 @@ module.exports = [
     severityFlag: 'error'
   }, {
     name: 'at-rule-no-unknown',
-    warningText: 'Unexpected unknown at-rule \"@unknown\" (at-rule-no-unknown)',
+    warningText: 'Unexpected unknown at-rule "@unknown" (at-rule-no-unknown)',
     warnings: 3,
     warningLine: 1,
     warningCol: 1,
     severityFlag: 'error'
   }, {
     name: 'property-no-vendor-prefix',
-    warningText: 'Unexpected vendor-prefix \"-webkit-transform\" (property-no-vendor-prefix)',
+    warningText: 'Unexpected vendor-prefix "-webkit-transform" (property-no-vendor-prefix)',
     warnings: 2,
     warningLine: 1,
     warningCol: 5,
     severityFlag: 'error'
   }, {
     name: 'property-no-unknown',
-    warningText: 'Unexpected unknown property \"colr\" (property-no-unknown)',
+    warningText: 'Unexpected unknown property "colr" (property-no-unknown)',
     warnings: 1,
     warningLine: 2,
     warningCol: 3,

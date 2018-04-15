@@ -15,7 +15,7 @@
   "author": {
     "name": "Contactlab UXD Team",
     "email": "uxd@contactlab.com",
-    "homepage": "https://contactlab.com/"
+    "homepage": "https://ux.contactlab.com/"
   },
   "contributors": [
     "Giovanni Tramutola <giovanni.tramutola@contactlab.com>",
@@ -36,46 +36,59 @@
     "stylelintconfig"
   ],
   "engines": {
-    "node": ">=8",
-    "npm": ">=5"
+    "node": ">= 8.5.x",
+    "yarn": ">= 1.5.x"
   },
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "lib"
+  ],
   "main": "./lib/index.js",
   "jest": {
-    "testEnvironment": "node",
+    "testEnvironment": "jsdom",
     "verbose": true
   },
-  "eslintConfig": {
-    "env": {
-      "node": true,
-      "browser": false
-    },
-    "extends": "contactlab"
+  "semistandard": {
+    "env": [
+      "browser",
+      "node",
+      "jest"
+    ],
+    "ignore": [
+      "config/element/scaffold-*"
+    ]
   },
   "scripts": {
-    "lint:js": "shx echo \"——— Lint JS ———\" && eslint \"./src/**/*.js\" || true",
-    "lint:css": "shx echo \"——— Lint CSS ———\" && stylelint \"./examples/**/*.{css,pcss}\" --config \"./src/index.js\" || true",
-    "lint": "npm run lint:js && npm run lint:css",
-    "pretest": "npm run lint",
-    "test": "shx echo \"——— Test Rules ———\" && jest",
-    "test:watch": "shx echo \"——— Test Rules Watch ———\" && jest --watch",
-    "prebuild": "npm run test",
-    "build": "shx rm -rf lib && shx mkdir lib && shx cp src/* lib",
-    "prerelease": "git checkout master && git pull origin master",
-    "release": "shx echo \"——— Bump and Release ———\" && standard-version",
+    "prelint:js": "shx echo '\n  💅  Running Javascript lint...  \n' | chalk magentaBright",
+    "lint:js": "semistandard --verbose | snazzy || true",
+    "prelint:css": "shx echo '\n  💅  Running CSS lint...  \n' | chalk magentaBright",
+    "lint:css": "stylelint \"./examples/**/*.{css,pcss}\" --config \"./src/index.js\" || true",
+    "lint": "yarn lint:js && yarn lint:css",
+    "preunit": "shx echo '\n  ⛑  Running unit tests...  \n' | chalk magentaBright",
+    "unit": "jest",
+    "unit:watch": "jest --watch",
+    "unit:coverage": "jest --coverage",
+    "test": "yarn lint && yarn unit",
+    "prebuild": "shx echo '\n  📦  Building rules...  \n' | chalk yellowBright",
+    "build": "shx rm -rf lib && shx mkdir lib && shx cp 'src/*' 'lib/'",
+    "postbuild": "shx echo '\n  ✅  Rules build completed!  \n' | chalk greenBright",
+    "prerelease": "shx echo '\n  🚀  Release on NPM and GitHub...  \n' | chalk cyanBright",
+    "release": "standard-version",
     "postrelease": "git push --follow-tags origin master && npm publish"
   },
   "dependencies": {
-    "stylelint": "9.0.0",
-    "stylelint-config-standard": "18.1.0"
+    "stylelint": "9.2.0",
+    "stylelint-config-standard": "18.2.0"
   },
   "devDependencies": {
-    "eslint": "4.18.0",
-    "eslint-config-contactlab": "1.0.0",
-    "jest": "22.3.0",
+    "chalk": "2.3.2",
+    "chalk-cli": "4.0.0",
+    "jest": "22.4.3",
+    "semistandard": "12.0.1",
     "shx": "0.2.2",
+    "snazzy": "7.1.1",
     "standard-version": "4.3.0"
   }
 }
