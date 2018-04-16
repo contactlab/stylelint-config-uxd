@@ -2,6 +2,7 @@
 Some basic conventions for contributing to **stylelint-config-uxd**.
 
 ## Contents
+- [First Contribution](#first-contribution)
 - [Tools](#tools)
 - [General](#general)
 - [Forking](#forking)
@@ -9,6 +10,9 @@ Some basic conventions for contributing to **stylelint-config-uxd**.
 - [Testing and Linting](#testing-and-linting)
 - [Branching](#branching)
 - [Commit Message Format](#commit-message-format)
+
+## 📚 First Contribution?
+Working on your first Pull Request? You can learn how from this **free series**, [How to Contribute to an Open Source Project on GitHub](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github).
 
 ## 🛠️ Tools
 * Prefer latest [Node](https://nodejs.org/en/download/) version
@@ -45,37 +49,36 @@ We try to keep two main branches at all times:
 #### Branch Prefixes
 When branching, try to prefix your branch with one of the following:
 
-Prefix     | Description                                                               | Example
------------|---------------------------------------------------------------------------|--------------------------------------------------------------------
-`feature/` | New feature was added                                                     | `feature/add-learning-outcome-alignment`
-`fix/`     | A bug was fixed                                                           | `fix/crash-when-code-submission-finished`
+ Prefix     | Description           | Example                                   |
+------------|-----------------------|-------------------------------------------|
+ `feature/` | New feature was added | `feature/add-learning-outcome-alignment`  |
+ `fix/`     | A bug was fixed       | `fix/crash-when-code-submission-finished` |
 
 ## 💬 Commit Message Format
-Each commit message should include a **type**, a **scope** and a **subject**:
+Each commit message should include a **type** and a **subject**:
 
 ```
-<type>(<optional scope>): <subject>
+<type>: <subject>
 ```
 
 Lines should not exceed 100 characters. This allows the message to be easier to read on github as well as in various git tools and produces a nice, neat commit log ie:
 
 ```
-#271 feat(src/rules.js): add 'color-no-invalid-hex' rule
-#270 fix(src/index.js): add semicolons after every statement
-#269 chore(readme.md): update 'usage' paragraph
+#271 feat: add 'color-no-invalid-hex' rule
+#270 fix: add semicolons after every statement
+#269 chore: update 'usage' paragraph
 ```
 
 #### Type
 Must be one of the following:
 
-Prefix     | Description
------------|-------------------------------------------------------------------------------------------------------
-`feat`     | A new feature
-`fix`      | A bug fix
-`chore`    | Changes to the build process or auxiliary tools and libraries such as documentation generation
-
-#### Scope
-The scope could be anything specifying place of the commit change. For example editorconfig, readme, package, etc...
+| Prefix  | Description                                                         |
+|---------|---------------------------------------------------------------------|
+| `docs`  | Changes to the documentation.                                       |
+| `feat`  | A new feature.                                                      |
+| `fix`   | A bug fix.                                                          |
+| `chore` | Changes to the build process or auxiliary tools and libraries.      |
+| `test`  | Adding missing tests, refactoring tests; no production code change. |
 
 #### Subject
 The subject contains succinct description of the change:

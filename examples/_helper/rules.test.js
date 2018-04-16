@@ -1,83 +1,89 @@
-const fs = require('fs');
+const chalk = require('chalk');
 const config = require('../../src/index');
-const stylelint = require('stylelint');
+const fs = require('fs');
 const rules = require('./rules');
+const stylelint = require('stylelint');
 
-rules.forEach(rule => {
+rules.forEach(function (rule) {
   const validCSS = fs.readFileSync(`./examples/${rule.name}/css-valid.css`, 'utf-8');
   const invalidCSS = fs.readFileSync(`./examples/${rule.name}/css-invalid.css`, 'utf-8');
+  const ruleNameUppercase = rule.name.toUpperCase();
 
-  describe('flags no warnings with valid css', () => {
+  describe(`\n ${chalk.magentaBright('Flags no warnings with valid css:')} \n`, function () {
     let result;
-    beforeEach(() => {
+    beforeEach(function () {
       result = stylelint.lint({
         code: validCSS,
         config
       });
     });
 
-    it(`rule: ${rule.name.toUpperCase()} — test: did not error`, () => {
-      return result.then(data => (
-        expect(data.errored).toBeFalsy()
-      ));
-    });
+    describe(`${ruleNameUppercase}:`, function () {
+      it('did not error', function () {
+        return result.then(function (data) {
+          expect(data.errored).toBeFalsy();
+        });
+      });
 
-    it(`rule: ${rule.name.toUpperCase()} — test: flags no warnings`, () => {
-      return result.then(data => (
-        expect(data.results[0].warnings.length).toBe(0)
-      ));
+      it('flags no warnings', function () {
+        return result.then(function (data) {
+          expect(data.results[0].warnings.length).toBe(0);
+        });
+      });
     });
-  })
+  });
 
-  describe('flags warnings with invalid css', () => {
+  describe(`\n ${chalk.magentaBright('Flags warnings with invalid css:')} \n`, function () {
     let result;
-    beforeEach(() => {
+    beforeEach(function () {
       result = stylelint.lint({
         code: invalidCSS,
         config
       });
     });
 
-    it(`rule: ${rule.name.toUpperCase()} — test: did error`, () => {
-      return result.then(data => (
-        expect(data.errored).toBeTruthy()
-      ));
-    });
+    describe(`${ruleNameUppercase}:`, function () {
+      it(`did error`, function () {
+        return result.then(function (data) {
+          expect(data.errored).toBeTruthy();
+        });
+      });
 
-    it(`rule: ${rule.name.toUpperCase()} — test: flags ${rule.warnings} warning`, () => {
-      return result.then(data => (
-        expect(data.results[0].warnings.length).toBe(rule.warnings)
-      ));
-    });
+      it(`flags ${rule.warnings} warning`, function () {
+        return result.then(function (data) {
+          expect(data.results[0].warnings.length).toBe(rule.warnings);
+        });
+      });
 
-    it(`rule: ${rule.name.toUpperCase()} — test: correct rule flagged`, () => {
-      return result.then(data => (
-        expect(data.results[0].warnings[0].rule).toBe(rule.name)
-      ));
-    });
+      it(`correct rule flagged`, () => {
+        return result.then(function (data) {
+          expect(data.results[0].warnings[0].rule).toBe(rule.name);
+        });
+      });
 
-    it(`rule: ${rule.name.toUpperCase()} — test: correct warning text`, () => {
-      return result.then(data => (
-        expect(data.results[0].warnings[0].text).toBe(rule.warningText)
-      ));
-    });
+      it(`correct warning text`, function () {
+        return result.then(function (data) {
+          expect(data.results[0].warnings[0].text).toBe(rule.warningText);
+        });
+      });
 
-    it(`rule: ${rule.name.toUpperCase()} — test: correct severity flagged`, () => {
-      return result.then(data => (
-        expect(data.results[0].warnings[0].severity).toBe(rule.severityFlag)
-      ));
-    });
+      it(`correct severity flagged`, function () {
+        return result.then(function (data) {
+          expect(data.results[0].warnings[0].severity).toBe(rule.severityFlag);
+        });
+      });
 
-    it(`rule: ${rule.name.toUpperCase()} — test: correct line number`, () => {
-      return result.then(data => (
-        expect(data.results[0].warnings[0].line).toBe(rule.warningLine)
-      ));
-    });
+      it(`correct line number`, function () {
+        return result.then(function (data) {
+          expect(data.results[0].warnings[0].line).toBe(rule.warningLine);
+        });
+      });
 
-    it(`rule: ${rule.name.toUpperCase()} — test: correct column number`, () => {
-      return result.then(data => (
-        expect(data.results[0].warnings[0].column).toBe(rule.warningCol)
-      ));
+      it(`correct column number`, function () {
+        return result.then(function (data) {
+          expect(data.results[0].warnings[0].column).toBe(rule.warningCol);
+        });
+      });
     });
   });
 });
