@@ -43,7 +43,10 @@
     "access": "public"
   },
   "files": [
-    "lib"
+    "doc",
+    "lib",
+    "*.md",
+    "LICENSE"
   ],
   "main": "./lib/index.js",
   "jest": {
@@ -79,6 +82,7 @@
     "postrelease": "git push --follow-tags origin master && npm publish"
   },
   "dependencies": {
+    "npm": "5.8.0",
     "stylelint": "9.2.0",
     "stylelint-config-standard": "18.2.0"
   },
