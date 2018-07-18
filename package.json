@@ -4,16 +4,9 @@
   "title": "Contactlab UXD Stylelint",
   "description": "Stylelint configuration used in Contactlab projects.",
   "license": "MIT",
-  "homepage": "https://github.com/contactlab/stylelint-config-uxd",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/contactlab/stylelint-config-uxd"
-  },
-  "bugs": {
-    "url": "https://github.com/contactlab/stylelint-config-uxd/issues"
-  },
+  "homepage": "https://ux.contactlab.com/",
   "author": {
-    "name": "Contactlab UXD Team",
+    "name": "Contactlab UX Engineering Team",
     "email": "uxd@contactlab.com",
     "homepage": "https://ux.contactlab.com/"
   },
@@ -21,6 +14,13 @@
     "Giovanni Tramutola <giovanni.tramutola@contactlab.com>",
     "Mattia Astorino <mattia.astorino@contactlab.com>"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/contactlab/stylelint-config-uxd"
+  },
+  "bugs": {
+    "url": "https://github.com/contactlab/stylelint-config-uxd/issues"
+  },
   "keywords": [
     "code checker",
     "code linter",
@@ -57,41 +57,31 @@
       "browser",
       "node",
       "jest"
-    ],
-    "ignore": [
-      "config/element/scaffold-*"
     ]
   },
   "scripts": {
-    "prelint:js": "shx echo '\n  💅  Running Javascript lint...  \n' | chalk magentaBright",
-    "lint:js": "semistandard --verbose | snazzy || true",
-    "prelint:css": "shx echo '\n  💅  Running CSS lint...  \n' | chalk magentaBright",
-    "lint:css": "stylelint \"./examples/**/*.{css,pcss}\" --config \"./src/index.js\" || true",
-    "lint": "yarn lint:js && yarn lint:css",
-    "preunit": "shx echo '\n  ⛑  Running unit tests...  \n' | chalk magentaBright",
+    "lint:js": "semistandard | snazzy",
+    "lint:css": "stylelint ./examples/**/*.{css,pcss} --config ./src/index.js",
+    "lint": "yarn lint:css && yarn lint:js",
     "unit": "jest",
     "unit:watch": "jest --watch",
     "unit:coverage": "jest --coverage",
     "test": "yarn lint && yarn unit",
-    "prebuild": "shx echo '\n  📦  Building rules...  \n' | chalk yellowBright",
     "build": "shx rm -rf './lib' && shx mkdir lib && shx cp './src/*' './lib/'",
-    "postbuild": "shx echo '\n  ✅  Rules build completed!  \n' | chalk greenBright",
     "switch:master": "git checkout master && git pull origin master",
-    "prerelease": "shx echo '\n  🚀  Release on NPM and GitHub...  \n' | chalk cyanBright",
     "release": "yarn switch:master && standard-version --sign",
     "postrelease": "git push --follow-tags origin master && npm publish"
   },
   "dependencies": {
-    "stylelint": "9.2.0",
+    "stylelint": "9.3.0",
     "stylelint-config-standard": "18.2.0"
   },
   "devDependencies": {
-    "chalk": "2.3.2",
-    "chalk-cli": "4.0.0",
-    "jest": "22.4.3",
+    "chalk": "2.4.1",
+    "jest": "23.4.1",
     "semistandard": "12.0.1",
-    "shx": "0.2.2",
+    "shx": "0.3.2",
     "snazzy": "7.1.1",
-    "standard-version": "4.3.0"
+    "standard-version": "4.4.0"
   }
 }
