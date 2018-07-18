@@ -66,10 +66,8 @@
     "unit": "jest",
     "unit:watch": "jest --watch",
     "unit:coverage": "jest --coverage",
-    "test": "yarn lint && yarn unit",
     "build": "shx rm -rf './lib' && shx mkdir lib && shx cp './src/*' './lib/'",
-    "switch:master": "git checkout master && git pull origin master",
-    "release": "yarn switch:master && standard-version --sign",
+    "release": "yarn build && standard-version --sign",
     "postrelease": "git push --follow-tags origin master && npm publish"
   },
   "dependencies": {
