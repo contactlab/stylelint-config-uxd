@@ -1,3 +1,5 @@
+## ⚠️  Deprecated
+
 # Contactlab UXD Stylelint
 [![NPM version](https://img.shields.io/npm/v/@contactlab/stylelint-config-uxd.svg)](https://www.npmjs.com/package/@contactlab/stylelint-config-uxd)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
@@ -12,8 +14,6 @@ The purpose of this library is to promote code style consistency across complex 
   - [Tests](#tests)
   - [Similar projects](#similar-projects)
   - [Rules](#rules)
-  - [Contributing](./docs/CONTRIBUTING.md)
-  - [Code of Conduct](./docs/CODE_OF_CONDUCT.md)
 
 ## Installation
 We recommend to use [Yarn](https://yarnpkg.com/lang/en/docs/install/) over npm (is fine anyway) and this **stylelint config** package:
