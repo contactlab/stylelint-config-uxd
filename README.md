@@ -1,4 +1,4 @@
-## ⚠️  Deprecated
+:warning: **This project is no longer mantained**
 
 # Contactlab UXD Stylelint
 [![NPM version](https://img.shields.io/npm/v/@contactlab/stylelint-config-uxd.svg)](https://www.npmjs.com/package/@contactlab/stylelint-config-uxd)
